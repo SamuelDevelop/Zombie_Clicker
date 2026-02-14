@@ -1,0 +1,32 @@
+:root {
+    --popRed: linear-gradient(to right bottom, rgb(209, 51, 51), rgb(80, 18, 18));
+    --popGolden: linear-gradient(to right bottom, rgb(230, 148, 25), rgb(95, 64, 6));
+    --popBlue: linear-gradient(to right bottom, rgb(30, 125, 189), rgb(9, 53, 94));
+}
+
+.popUP{
+    width: 70vw; height: 70vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    border: 3px white solid;
+    background-image: var(--popGolden);
+    opacity: 1;
+    transition: all ease-in-out 200ms;
+}
+
+.popUP h2{
+    color: white;
+    font-family: "Barrio", system-ui;
+}
+
+.popUP p{
+    color: white;
+    font-family: "Chakra Petch", sans-serif;
+}

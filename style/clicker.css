@@ -1,0 +1,12 @@
+.header-parte button{
+    background-color: transparent;
+    border: none;
+    transition: all 150ms ease-in-out;
+    font-size: 20pt;
+    color: white;
+    cursor: pointer;
+}
+
+.header-parte button:hover{
+    font-size: 25pt;
+}
