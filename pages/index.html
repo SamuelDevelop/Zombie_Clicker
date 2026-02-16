@@ -6,6 +6,11 @@
     <title>Zombie Clicker</title>
     <link rel="icon" href="../images/iu/click.webp">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style/popUP.css">
+    <link rel="stylesheet" href="../style/clicker.css">
+    <link rel="stylesheet" href="../style/clicker-area.css">       
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nosifer&family=Oswald:wght@200..700&family=Potta+One&family=Squada+One&display=swap" rel="stylesheet">
@@ -18,17 +23,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Barrio&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Krona+One&family=Nosifer&family=Oswald:wght@200..700&family=Potta+One&family=Squada+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="CSS/popUP.css">
-    <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/form.css">
-    <link rel="stylesheet" href="CSS/popUP.css">
 </head>
 <body>
-    <header>
-        <img src="images/zombie-mine.gif">
-        <h1>Zombie Clicker Game</h1>
-    </header>
+    <header></header>
 
     <main class="conteudo-principal">      
         <section id="View"></section>
@@ -39,12 +36,11 @@
 
     <div id="popUP" class="popUP"></div>
 
-    <script src="JS/popUP.js"></script>
-    <script src="JS/LocalStorage.js"></script>
-    <script src="JS/constPersonagens.js"></script>
-    <script src="JS/personagemSelect.js"></script>
-    <script src="JS/index.js"></script>
-    <script src="JS/sounds.js"></script>
-    <script src="JS/game.js"></script>
+    <script src="../code/view/header.js"></script>
+    <script src="../code/view/popUp.js"></script>
+
+    <script src="../code/LocalStorage.js"></script>
+    <script type="module" src="../code/view/personagemSelect.js"></script>
+    <script type="module" src="../code/index.js"></script>
 </body>
 </html>

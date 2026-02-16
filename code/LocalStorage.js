@@ -19,11 +19,11 @@ function criarSave(NOME, PERSONAGEM){
         armasDesbloqueadas: [],
     }
     
-    localStorage.setItem("Clicker_Data", JSON.stringify(PLAYER_DATA));
+    localStorage.setItem("ClickerData", JSON.stringify(PLAYER_DATA));
 }
 
 function getDados(){    
-    const raw = localStorage.getItem("Clicker_Data");
+    const raw = localStorage.getItem("ClickerData");
     if (raw === null) return null;
 
     try {
@@ -42,10 +42,10 @@ function aumentarCliques(){
 }
 
 function saveDados(dados){
-    localStorage.setItem("Clicker_Data", JSON.stringify(dados));
+    localStorage.setItem("ClickerData", JSON.stringify(dados));
 }
 
 function deletarDados(){
-    localStorage.removeItem("Clicker_Data");
+    localStorage.removeItem("ClickerData");
     location.reload();
 }

@@ -1,12 +1,14 @@
 {
     "guns": [
         {
+            "id": 0,
             "sprite": "images/Espada_de_piedra.webp",
             "price": 0,
             "damage": 1,
             "clicksReward": 1
         },
         {
+            "id": 1,
             "sprite": "images/Espada_de_oro.webp",
             "price": 100,
             "damage": 5,
@@ -14,6 +16,7 @@
         },
 
         {
+            "id": 2,
             "sprite": "images/Diamond_Sword.webp",
             "price": 300,
             "damage": 10,
@@ -21,6 +24,7 @@
         },
 
         {
+            "id": 3,
             "sprite": "images/espadaroxinha.gif",
             "price": 500,
             "damage": 50,
@@ -28,6 +32,7 @@
         },
 
         {
+            "id": 4,
             "sprite": "images/Netherite_Sword.webp",
             "price": 800,
             "damage": 100,
@@ -35,6 +40,7 @@
         },
 
         {
+            "id": 5,
             "sprite": "images/espada suprema.gif",
             "price": 1000,
             "damage": 250,
@@ -42,6 +48,7 @@
         },
 
         {
+            "id": 6,
             "sprite": "images/deusessword.gif",
             "price": 2500,
             "damage": 500,
@@ -49,6 +56,7 @@
         },
 
         {
+            "id": 7,
             "sprite": "images/machadin.gif",
             "price": 5000,
             "damage": 1000,
@@ -56,6 +64,7 @@
         },
 
         {
+            "id": 8,
             "sprite": "images/luminite-sword.gif",
             "price": 8555,
             "damage": 2500,

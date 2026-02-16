@@ -1,26 +1,31 @@
 {
     "bosses": [
         {
+            "id": "jones",
             "name": "Davy Jones",
             "sprite": "images/bosses/esqueletao.gif",
             "vida": 100
         },
         {
+            "id": "flor",
             "name": "Flor de Cabeça",
             "sprite": "images/bosses/florHead.gif",
             "vida": 100
         },
         {
+            "id": "ganon",
             "name": "Cria de Hyrule",
             "sprite": "images/bosses/ganon.gif",
             "vida": 100
         },
         {
+            "id": "ocram",
             "name": "Baratão",
             "sprite": "images/bosses/ocram.webp",
             "vida": 100
         },
         {
+            "id": "gecko",
             "name": "Vilão Genérico",
             "sprite": "images/bosses/geco.gif",
             "vida": 100

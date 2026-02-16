@@ -1,26 +1,31 @@
 {
     "enemys": [
         {
+            "id": "zombie1",
             "name": "Rival de Plantas",
             "sprite": "images/enemys/zombie1.gif",
             "vida": 100
         },
         {
+            "id": "zombie2",
             "name": "Dor no Olho",
             "sprite": "images/enemys/zombie2.gif",
             "vida": 100
         },
         {
+            "id": "zombie3",
             "name": "MichaelBie",
             "sprite": "images/enemys/zombie3.gif",
             "vida": 100
         },
         {
+            "id": "zombie4",
             "name": "Zombie Cone",
             "sprite": "images/enemys/zombie3.gif",
             "vida": 100
         },
         {
+            "id": "zombie5",
             "name": "Block Zombie",
             "sprite": "images/enemys/zombie3.gif",
             "vida": 100

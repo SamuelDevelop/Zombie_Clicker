@@ -1,11 +1,9 @@
-const dados = getDados();
-
 const HEADER = document.querySelector("header");
 
 HEADER.innerHTML = 
 `
     <div class="header-parte">
-        <img onclick="window.location = 'index.html'" src="${getPersonagemSprite(dados.personagem)}">
+        <img onclick="window.location = 'index.html'" src="">
         <h1>Zombie Clicker</h1>
     </div>
     <div class="header-parte">      

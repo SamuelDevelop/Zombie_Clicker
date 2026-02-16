@@ -1,0 +1,58 @@
+{
+    "characters": [
+        {
+            "id": "bowser",
+            "name": "Bowser",
+            "description": "Após conquistar Peach, Bowser agora decidiu redimir-se eliminando todos os Zumbis da face da Terra.",
+            "image": "images/characters/bowser.gif"
+        },
+        {
+            "id": "capitao",
+            "name": "Capitão América",
+            "description": "Após um acidente com o Dr.Estranho, Capitão América acaba parando num universo repleto de Zumbis.",
+            "image": "images/characters/capitao.gif"
+        },
+        {
+            "id": "goku",
+            "name": "Goku Base",
+            "description": "...",
+            "image": "images/characters/goku.gif"
+        },
+        {
+            "id": "homer",
+            "name": "Homer Simpson",
+            "description": "...",
+            "image": "images/characters/homer.gif"
+        },
+        {
+            "id": "labubu",
+            "name": "Labubu",
+            "description": "...",
+            "image": "images/characters/labubu.gif"
+        },
+        {
+            "id": "monkey",
+            "name": "Monkey D. Luffy",
+            "description": "...",
+            "image": "images/characters/luffy.gif"
+        },
+        {
+            "id": "megaman",
+            "name": "MegaMan",
+            "description": "...",
+            "image": "images/characters/megamen.gif"
+        },
+        {
+            "id": "sonic",
+            "name": "Sonic",
+            "description": "...",
+            "image": "images/characters/sonic.gif"
+        },
+        {
+            "id": "grogu",
+            "name": "Grogu",
+            "description": "...",
+            "image": "images/characters/grogu.gif"
+        }
+    ]
+}

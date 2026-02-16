@@ -1,7 +1,9 @@
+import * as functions from "./view/personagemSelect.js";
+
 const camadaVIEW = document.getElementById("View");
 const camadaOPCOES = document.getElementById("Opcoes");
 
-function loadPage(){
+async function loadPage(){
     const DADOS = getDados();
 
     if(DADOS == null){
@@ -12,7 +14,7 @@ function loadPage(){
                 <input type="text" id="nickname" value="jogador" requerid>
                 <h3>Seu Personagem:</h3>
                 <div class="personagem-change">
-                    ${personagemViewHTML(0)}
+                    ${await functions.personagemViewHTML("bowser")}
                 </div>
                 <div class="botoes-alinhados">
                     <button onclick="recuar()"><i class="fa-solid fa-caret-left"></i></button>
@@ -42,7 +44,7 @@ function loadPage(){
     }
 }
 
-loadPage();
+await loadPage();
 
 function registrar(){
     const NOME = document.getElementById("nickname").value.trim();
@@ -62,23 +64,8 @@ function deletar(){
 }
 
 
-function sortearElemento(vetor){
-    const indice = Math.floor(Math.random() * vetor.length);
-    return vetor[indice];
-}
 
-const FALAS = ["Protejar o mundo é nossa missão!",
-               "Tem vários zumbis que não parecem zumbis...",
-               "Por que tantos vivos parecem zumbis?",
-               "Armas mais poderosas dão mais dinheiro",
-               "Clique em Zumbis! Isso é um Cliquer!",
-               "Olhe para mim, aquele cara... ele não",
-               "Agora que é um cadente sente saudade da vida antiga?",
-               "clicar, clicar, clicar......",
-               "...dizem que se você chegar a 1 milhão de cliques algo bizarro acontece...",
-]
 
 function play(){
-    openPopUp("Bora Jogar!", `${sortearElemento(FALAS)}`, 0);
     setTimeout(()=>{window.location = "clicker.html";}, 2000);
 }

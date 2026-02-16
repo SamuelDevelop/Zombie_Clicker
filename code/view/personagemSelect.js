@@ -1,7 +1,10 @@
+import * as functions from "../fetcher.js"
+import * as functionsFilter from "../filter.js"
+
 let idAtual = 0;
 
-function avancar(){
-    const TAMANHO = getAllPersonagens().length;
+async function avancar(){
+    const TAMANHO = await functions.getCharacters().length;
 
     if(idAtual + 1 < TAMANHO){
         idAtual += 1;
@@ -12,8 +15,8 @@ function avancar(){
     changePersonagemViewHTML(idAtual);
 }
 
-function recuar(){
-    const TAMANHO = getAllPersonagens().length;
+async function recuar(){
+    const TAMANHO = await functions.getCharacters().length;
 
     if(idAtual - 1 > -1){
         idAtual -= 1;
@@ -29,14 +32,15 @@ function changePersonagemViewHTML(id){
     TELA.innerHTML = `${personagemViewHTML(id)}`;
 }
 
-function personagemViewHTML(id){
-    const PERSONAGENS = getAllPersonagens();
-    const PERSONAGEM = PERSONAGENS[id];
+export async function personagemViewHTML(id){
+    const PERSONAGEM = await functionsFilter.getCharacterById(id);
+    console.log(PERSONAGEM);
+
     const STRING = `
-            <img src="${getPersonagemSprite(PERSONAGEM)}">
+            <img src="../${PERSONAGEM.image}">
             <div class="personagem-dados">
-                <h3>${getPersonagemName(PERSONAGEM)}</h3>
-                <p>${getPersonagemDescricao(PERSONAGEM)}</p>
+                <h3>${PERSONAGEM.name}</h3>
+                <p>${PERSONAGEM.description}</p>
             </div>
 
     `;
@@ -45,6 +49,6 @@ function personagemViewHTML(id){
 }
 
 function getAtualPersoangem(){
-    const PERSONAGENS = getAllPersonagens();
+    const PERSONAGENS = functions.getCharacters();
     return PERSONAGENS[idAtual];
 }
