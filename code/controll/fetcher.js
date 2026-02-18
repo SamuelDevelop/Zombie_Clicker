@@ -1,10 +1,8 @@
 export async function JSONFetcher(tipo) {
     try {
-        console.log(`../json/${tipo}.json`);
         const response = await fetch(`../json/${tipo}.json`);
         const data = await response.json();
-        console.log(data);
-
+        
         return data;
     }
 

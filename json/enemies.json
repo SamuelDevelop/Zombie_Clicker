@@ -21,13 +21,13 @@
         {
             "id": "zombie4",
             "name": "Zombie Cone",
-            "sprite": "images/enemys/zombie3.gif",
+            "sprite": "images/enemys/zombie4.gif",
             "vida": 100
         },
         {
             "id": "zombie5",
             "name": "Block Zombie",
-            "sprite": "images/enemys/zombie3.gif",
+            "sprite": "images/enemys/zombieMine.gif",
             "vida": 100
         }
     ]

@@ -1,0 +1,34 @@
+.save-view{
+    background-image: var(--gradienteRoxo);  
+    
+    box-sizing: border-box;
+    margin: 2rem auto 1rem auto;
+    border: rgba(0, 0, 0, 0.479) 2px solid;
+    border-radius: 1rem;
+    
+    width: 40vw; height: 50vh;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-view > img{
+    max-width: 200px; max-width: 150px;
+    filter: drop-shadow(-2px 2px 4px #dd6cff);
+}
+
+.save-view > *{
+    font-family: "Google Sans Code", monospace;
+    color: white;
+    text-align: center
+}
+
+.save-view > section{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 1rem;
+}

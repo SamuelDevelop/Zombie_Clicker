@@ -1,8 +1,7 @@
-
-function criarSave(NOME, PERSONAGEM){
+export function criarSave(nome, personagem){
     const PLAYER_DATA = {
-        nickname: NOME,
-        personagem: PERSONAGEM,
+        nickname: nome != "" ? nome : "jogador",
+        personagem: personagem,
         clicks: 0,
         clicksTotais: 0,
         aumentoClicks: 1,
@@ -22,7 +21,7 @@ function criarSave(NOME, PERSONAGEM){
     localStorage.setItem("ClickerData", JSON.stringify(PLAYER_DATA));
 }
 
-function getDados(){    
+export function getDados(){    
     const raw = localStorage.getItem("ClickerData");
     if (raw === null) return null;
 
@@ -34,18 +33,11 @@ function getDados(){
     }
 }
 
-function aumentarCliques(){
-    const DADOS = getDados();
-    DADOS.clicks += DADOS.aumentoClicks;
-    DADOS.clicksTotais += DADOS.aumentoClicks;
-    saveDados(DADOS);
-}
-
-function saveDados(dados){
+export function saveDados(dados){
     localStorage.setItem("ClickerData", JSON.stringify(dados));
 }
 
-function deletarDados(){
+export function deletarDados(){
     localStorage.removeItem("ClickerData");
     location.reload();
 }

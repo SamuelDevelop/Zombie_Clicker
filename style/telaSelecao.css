@@ -1,0 +1,94 @@
+.form {
+    background-image: var(--gradienteRoxo);  
+    
+    box-sizing: border-box;
+    margin: 4rem auto 1rem auto;
+    border: rgba(0, 0, 0, 0.479) 2px solid;
+    border-radius: 1rem;
+    
+    width: 70vw; height: 55vh;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form > * {
+    font-family: "Google Sans Code", monospace;
+    color: white;
+}
+
+.form > h2{
+    text-align: center
+}
+
+.form > section{
+    display: flex;
+    flex-direction: row;
+}
+
+.name-input{
+    flex: 30%;
+}
+
+.character-input{
+    flex: 70%; 
+}
+
+.form article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+article > input{
+    background-color: rgb(227, 115, 255);
+    border: rgb(68, 19, 97) 2px solid;
+    border-radius: 1rem;
+
+    box-sizing: border-box;
+    padding: 0.3rem;
+
+    font-family: "Google Sans Code", monospace;
+    color: rgb(68, 19, 97);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.personagem-change{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personagem-change > img{
+    max-width: 200px; max-width: 150px;
+    filter: drop-shadow(-2px 2px 4px #dd6cff);
+}
+
+.botoes-alinhados{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+
+.botoes-alinhados button{
+    background-color: rgb(227, 115, 255);
+    border: rgb(68, 19, 97) 2px solid;
+    border-radius: 1rem;
+
+    box-sizing: border-box;
+    padding: 0.2rem 1rem;
+
+    font-family: "Google Sans Code", monospace;
+    color: rgb(68, 19, 97);
+    text-align: center;
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+.botoes-alinhados button:hover{
+    background-color: rgb(255, 255, 255);
+}

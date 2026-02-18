@@ -1,28 +1,46 @@
-const POPUP = document.getElementById("popUP");
-const estadosImg = ["images/flor.gif", "images/choro.gif", "images/porco.webp"];
+const POPUP = document.getElementById("popUp");
+const BLUR_BOX = document.querySelector(".blur-box");
+
+const estadosImg = ["images/iu/flor.gif", "images/iu/choro.gif", "images/iu/porco.webp"];
 const estadosStyle = ["var(--popBlue)", "var(--popRed)", "var(--popGolden)"];
 
-function openPopUp(titulo, msg, estado){
+export function openPopUp(titulo, msg, estado){
     let string = `
-        <img src="${estadosImg[estado]}" width="100px">
+        <img src="../${estadosImg[estado]}" width="100px">
         <h2>${titulo}</h2>
         <p>${msg}</p>
-        <button onclick="closePopUp()">Fechar</button>
+        <button id="botaoFechar">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </button>
     `;
 
     POPUP.style.backgroundImage = estadosStyle[estado];
     POPUP.innerHTML = string;
+
+    let btnFechar = document.getElementById("botaoFechar");
+    btnFechar.addEventListener("click", ()=>{closePopUp()});
+
     POPUP.style.opacity = 0;
     POPUP.style.display = "flex";
-    setTimeout(()=>{POPUP.style.opacity = 1;}, 200);
+    BLUR_BOX.style.display = "block";
+
+    setTimeout(()=>{
+        POPUP.style.opacity = 1;
+        BLUR_BOX.style.opacity = 1;
+    }, 250);
 }
 
-function closePopUp(){
+export function closePopUp(){
     POPUP.style.opacity = 1;
-    setTimeout(()=>{POPUP.style.opacity = 0;}, 200);
+    setTimeout(()=>{
+        POPUP.style.opacity = 0;
+        BLUR_BOX.style.opacity = 0;
+    }, 100);
+
     setTimeout(()=>{
         POPUP.style.display = "none";
         POPUP.innerHTML = "";
-    }, 510);
+        BLUR_BOX.style.display = "none";
+    }, 210);
 }
 

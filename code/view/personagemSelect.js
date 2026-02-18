@@ -1,22 +1,19 @@
-import * as functions from "../fetcher.js"
-import * as functionsFilter from "../filter.js"
+import * as fetcher from "../controll/fetcher.js"
 
 let idAtual = 0;
 
-async function avancar(){
-    const TAMANHO = await functions.getCharacters().length;
-
-    if(idAtual + 1 < TAMANHO){
-        idAtual += 1;
-    } else {
-        idAtual = 0;
-    }
-
+export async function avancar(){
+    const PERSONAGENS = await fetcher.getCharacters();
+    const TAMANHO = PERSONAGENS.characters.length;
+    
+    idAtual = (idAtual + 1) % TAMANHO;
+    
     changePersonagemViewHTML(idAtual);
 }
 
-async function recuar(){
-    const TAMANHO = await functions.getCharacters().length;
+export async function recuar(){
+    const PERSONAGENS = await fetcher.getCharacters();
+    const TAMANHO = PERSONAGENS.characters.length;
 
     if(idAtual - 1 > -1){
         idAtual -= 1;
@@ -27,28 +24,31 @@ async function recuar(){
     changePersonagemViewHTML(idAtual);
 }
 
-function changePersonagemViewHTML(id){
+async function changePersonagemViewHTML(id){
     const TELA = document.querySelector(".personagem-change");
-    TELA.innerHTML = `${personagemViewHTML(id)}`;
+    let STRING = await show(id);
+    TELA.innerHTML = `${STRING}`;
 }
 
-export async function personagemViewHTML(id){
-    const PERSONAGEM = await functionsFilter.getCharacterById(id);
-    console.log(PERSONAGEM);
+export async function show(id = 0){
+    const PERSONAGENS = await fetcher.getCharacters();
 
-    const STRING = `
+    const PERSONAGEM = PERSONAGENS.characters[id];
+    
+    const STRING =
+    `
             <img src="../${PERSONAGEM.image}">
             <div class="personagem-dados">
                 <h3>${PERSONAGEM.name}</h3>
-                <p>${PERSONAGEM.description}</p>
+                <p><i>"${PERSONAGEM.description}"</i></p>
             </div>
-
     `;
 
     return STRING;
 }
 
-function getAtualPersoangem(){
-    const PERSONAGENS = functions.getCharacters();
-    return PERSONAGENS[idAtual];
+export async function getSelected(){
+    const PERSONAGENS = await fetcher.getCharacters();
+    const PERSONAGEM = await PERSONAGENS.characters[idAtual];
+    return PERSONAGEM.id;
 }

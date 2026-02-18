@@ -1,0 +1,46 @@
+.conteudo-principal {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo-principal > section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article img{
+    max-width: 200px; max-height: 200px;
+    cursor: pointer;
+    filter: drop-shadow(-2px 2px 4px #dd6cff);
+}
+
+article p{
+    color: white;
+}
+
+.player p{
+    width: 50%;
+    text-align: center;
+    font-family: "Google Sans Code", monospace;
+    background-color: rgba(0, 0, 0, 0.562);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.atualEnemy{
+    font-family: "Jolly Lodger", system-ui;
+    color: white;
+    -webkit-text-stroke: 1px rgb(35, 0, 82);
+        
+    font-size: 25pt;
+}

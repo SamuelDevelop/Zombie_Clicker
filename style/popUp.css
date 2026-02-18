@@ -1,0 +1,55 @@
+:root {
+    --popRed: linear-gradient(to right bottom, rgba(255, 0, 0, 0.418), rgba(156, 0, 0, 0.788));
+    --popGolden: linear-gradient(to right bottom, rgba(255, 153, 0, 0.651), rgb(206, 134, 0));
+    --popBlue: linear-gradient(to right bottom, rgba(21, 113, 219, 0.705), rgb(13, 41, 68));
+}
+
+.popUp{
+    width: 40vw; height: 70vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    border: 2px rgba(0, 0, 0, 0.315) solid;
+    background-image: var(--popGolden);
+    opacity: 1;
+    transition: all ease-in-out 200ms;
+}
+
+.popUp h2, .popUp p{
+    color: white;
+    font-family: "Google Sans Code", monospace;
+    text-align: center;
+}
+
+.popUp > img{
+    max-width: 150px; max-width: 150px;
+    filter: drop-shadow(-2px 2px 4px #ffffff63);
+}
+
+.popUp button{
+    background-color: rgb(227, 115, 255);
+    border: rgb(68, 19, 97) 2px solid;
+    border-radius: 1rem;
+
+    max-height: 32px;
+
+    box-sizing: border-box;
+    padding: 0.2rem 1rem;
+
+    font-family: "Google Sans Code", monospace;
+    color: rgb(68, 19, 97);
+    text-align: center;
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+.popUp button:hover{
+    background-color: rgb(255, 255, 255);
+}
