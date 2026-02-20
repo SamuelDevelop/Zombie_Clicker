@@ -1,13 +1,22 @@
 import { createGameHeader } from "./view/header.js";
-import * as loadGame from "./view/loadGame.js";
+import * as loadGame from "./view/drawGame.js";
+import { Enemies } from "./classes/Enemies.js"
+import { Player } from "./classes/Player.js";
 
-function startPage(){
+async function startPage(){
     createGameHeader();
-    loadPage();
+    await loadPage();
 }
 
-startPage();
+await startPage();
 
-function loadPage(){
-    loadGame.apresentar();
+async function loadPage(){
+    await loadGame.apresentar();
+
+    //já pode hatear o js?
+    const PLAYER = new Player();
+
+    const ENEMIES = new Enemies(PLAYER);
+    await ENEMIES.iniciarInimigos(); 
+    
 }

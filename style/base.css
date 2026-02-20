@@ -53,6 +53,10 @@ header{
     cursor: pointer;
 }
 
+.header-parte > img:hover{
+    filter: drop-shadow(-2px 2px 4px #ffffff);
+}
+
 .header-parte > h1{
     font-family: "Jolly Lodger", system-ui;
     color: white;

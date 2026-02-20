@@ -7,13 +7,9 @@ export function criarSave(nome, personagem){
         aumentoClicks: 1,
         danoAtual: 1,
         armaAtual: "base",
+        vidaAtual: 100,
         zombiesMortos: 0,
-        level: 1,
-        fator: 1,
-        danoDuplo: false,
-        somadorContador: 1,
-        tempoPadrao: 1,
-
+        
         registroInimigos: [],
         armasDesbloqueadas: [],
     }

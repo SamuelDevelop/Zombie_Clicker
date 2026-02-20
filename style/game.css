@@ -21,26 +21,77 @@ article{
 article img{
     max-width: 200px; max-height: 200px;
     cursor: pointer;
-    filter: drop-shadow(-2px 2px 4px #dd6cff);
 }
 
 article p{
     color: white;
 }
 
-.player p{
+.player p, .atualEnemy p{
     width: 50%;
     text-align: center;
     font-family: "Google Sans Code", monospace;
     background-color: rgba(0, 0, 0, 0.562);
     padding: 0.2rem 0.5rem;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
 }
 
-.atualEnemy{
+.atualEnemy > h3{
     font-family: "Jolly Lodger", system-ui;
     color: white;
-    -webkit-text-stroke: 1px rgb(35, 0, 82);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.185);
         
-    font-size: 25pt;
+    font-size: 28pt;
 }
+
+.number-counter{
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transition: all 50ms ease-in-out;
+
+    font-family: "Google Sans Code", monospace;
+    color: rgb(68, 19, 97);
+
+    background-color: rgba(216, 62, 255, 0.822);
+    border: rgb(68, 19, 97) 2px solid;
+    padding: 0.2rem 0.5rem;
+    
+    border-radius: 0.5rem;
+
+    font-size: 15pt;
+    font-weight: bolder;
+}
+
+.chat-conteiner{
+    position: absolute;
+    bottom: 2vh; left: 2vw;
+    overflow: hidden;
+    width: 30vw; height: 60vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.chat{
+    display: none;
+    opacity: 0;
+    transition: all 50ms ease-in-out;
+
+    color: white;
+    font-family: "Google Sans Code", monospace;
+    background-color: rgba(0, 0, 0, 0.562);
+
+    padding: 0.2rem 0.5rem;
+    
+    border-radius: 0.5rem;
+
+    font-size: 14pt;
+    font-weight: bolder;
+}
+

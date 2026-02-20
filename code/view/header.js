@@ -1,23 +1,39 @@
+import * as filter from "../controll/filter.js";
+import * as localStorage from "../controll/localStorage.js";
 
-export function createGenericHeader(){
+export async function createGenericHeader(){
     const HEADER = document.querySelector("header");
+    let image = "images/enemys/zombieMine.gif";
+    const PLAYER_DATA = localStorage.getDados();
+
+    if(PLAYER_DATA != null){
+        const playerPers = await filter.getCharacterById(PLAYER_DATA.personagem);
+        image = playerPers.image;        
+    }
 
     HEADER.innerHTML = 
     `
         <div class="header-parte">
-            <img onclick="window.location = 'index.html'" src="../images/enemys/zombieMine.gif">
+            <img onclick="window.location = 'index.html'" src="../${image}">
             <h1>Zombie Clicker</h1>
         </div>
     `;
 }
 
-export function createGameHeader(){
+export async function createGameHeader(){
     const HEADER = document.querySelector("header");
+    let image = "images/enemys/zombieMine.gif";
+    const PLAYER_DATA = localStorage.getDados();
+
+    if(PLAYER_DATA != null){
+        const playerPers = await filter.getCharacterById(PLAYER_DATA.personagem);
+        image = playerPers.image;        
+    }
 
     HEADER.innerHTML = 
     `
         <div class="header-parte">
-            <img onclick="window.location = 'index.html'" src="../images/enemys/zombieMine.gif">
+            <img onclick="window.location = 'index.html'" src="../${image}">
             <h1>Zombie Clicker</h1>
         </div>
         <div class="header-parte">
